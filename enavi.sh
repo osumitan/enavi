@@ -30,7 +30,9 @@ function proc() {
 
 	# ログを作成
 	echo "■ ■ ■ ログを作成 ■ ■ ■"
-	wget -O - "${URL}" 2>/dev/null | gawk -f "${HOME}/enavi.awk" > ${LOGFILE}
+	pushd /home/sysadmin/max3tb/data/develop/workspace/enavi/jar > /dev/null
+	java -jar ./enavi.jar ${URL} 2>/dev/null > ${LOGFILE}
+	popd > /dev/null
 
 	# 前回と比較
 	echo "■ ■ ■ 前回と比較 ■ ■ ■"
@@ -42,8 +44,5 @@ function proc() {
 }
 export -f proc
 
-#proc "0500"
-# 船橋エリア
-#proc "0510"
 cat ${HOME}/arealist.txt | egrep -v "^#" | xargs -I % bash -c "proc %"
 
