@@ -30,8 +30,8 @@ function proc() {
 
 	# ログを作成
 	echo "■ ■ ■ ログを作成 ■ ■ ■"
-	pushd /home/sysadmin/max3tb/data/develop/workspace/enavi/jar > /dev/null
-	java -jar ./enavi.jar ${URL} 2>/dev/null > ${LOGFILE}
+	pushd ${HOME} > /dev/null
+	./enavi.py ${URL} > ${LOGFILE}
 	popd > /dev/null
 
 	# 前回と比較
