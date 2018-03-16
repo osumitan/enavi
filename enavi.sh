@@ -26,7 +26,7 @@ function proc() {
 	LOGFILE="${LOGDIR}/enavi_${ID}_${DT}.log"
 
 	# URL
-	URL="http://www.es-navi.com/list/list.cgi?num=${ID}"
+	URL="https://www.es-navi.com/list/list.cgi?num=${ID}"
 
 	# ログを作成
 	echo "■ ■ ■ ログを作成 ■ ■ ■"
