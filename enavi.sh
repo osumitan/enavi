@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ホームフォルダ
-HOME=~/max3tb/data/develop/sh/enavi
+HOME=~/data/develop/sh/enavi
 export HOME
 
 # ログフォルダ
